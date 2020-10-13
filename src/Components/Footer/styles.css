@@ -1,0 +1,26 @@
+.footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 0px;
+  background-color: #bd0e37;
+
+  position: relative;
+}
+
+.footer_social {
+    width: 100%;
+    padding-top: 8px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer_copyright {
+    position: absolute;
+    bottom: 8px;
+
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
