@@ -21,7 +21,7 @@ function Footer () {
           <FaFacebook size="40"  color="#fff"/>
         </a>  
       </div>
-      <p className="footer_copyright">Desenvolvido por Diogo Rocha <FaHeart color="white"/></p>
+      <p className="footer_copyright">Desenvolvido por Diogo Rocha <FaHeart color="white"/> Email: 1116186@imed.edu.br RA: 1116186 </p>
     </footer>
   )
 }
