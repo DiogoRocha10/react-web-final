@@ -22,7 +22,7 @@ function Species() {
   return (
     <>
     <Header/>
-    <div className="padding-principal especies">
+    <div className="padding-principal imagem-background">
         <h1 style={{ marginBottom: 30 }} className="centraliza-titulo titulo-grande">Species</h1>
 
         <div className="centraliza-tabela scroll-table">

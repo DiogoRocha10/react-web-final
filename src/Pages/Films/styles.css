@@ -4,6 +4,7 @@
 
 .centraliza-titulo {
     text-align: center;
+    color: white;
 }
 
 .centraliza-tabela {
@@ -13,10 +14,18 @@
 
 .centraliza-colunasTabela th {
     text-align: center;
+    color: white;
 }
 
 .titulo-grande{
     font-size: 42px;
+}
+.imagem-background {
+    width: 100%;
+    height: 1000px;
+    background-image: url(../../assets/img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 @media only screen and (max-width: 769px) {
     

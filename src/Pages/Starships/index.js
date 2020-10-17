@@ -23,7 +23,7 @@ function Starships() {
   return (
     <>
     <Header/>
-    <div className="padding-principal naves">
+    <div className="padding-principal imagem-background-starships">
         <h1 style={{ marginBottom: 30 }} className="centraliza-titulo titulo-grande">Starships</h1>
 
         <div className="centraliza-tabela-starships scroll-table">

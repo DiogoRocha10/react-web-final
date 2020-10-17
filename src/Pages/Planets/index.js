@@ -22,7 +22,7 @@ function Planets() {
   return (
     <>
     <Header/>
-    <div className="padding-principal planetas">
+    <div className="padding-principal imagem-background">
         <h1 style={{ marginBottom: 30 }} className="centraliza-titulo titulo-grande">Planets</h1>
 
         <div className="centraliza-tabela scroll-table">
