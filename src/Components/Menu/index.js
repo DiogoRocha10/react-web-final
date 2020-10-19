@@ -36,6 +36,11 @@ const Menu = () => (
                     Starships
                 </Link>
             </li>
+            <li className="app-menu__item">
+                <Link className="app-menu__link" to="/login">
+                    Login
+                </Link>
+            </li>
         </ul>
     </nav>
 )

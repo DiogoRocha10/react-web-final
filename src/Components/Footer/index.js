@@ -3,7 +3,7 @@ import React from "react";
 // import css
 import './styles.css'
 // import icons
-import { FaHeart, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 
 function Footer () {
@@ -21,7 +21,8 @@ function Footer () {
           <FaFacebook size="40"  color="#fff"/>
         </a>  
       </div>
-      <p className="footer_copyright">Desenvolvido por Diogo Rocha <FaHeart color="white"/> Email: 1116186@imed.edu.br RA: 1116186 </p>
+      <p className="footer_copyright">Desenvolvido por Diogo Rocha e Denilson Junior 
+       Emails: 1116186@imed.edu.br/ 1113575@imed.edu.br RAs: 1116186 / 1113575 </p>
     </footer>
   )
 }
