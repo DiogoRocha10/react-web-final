@@ -1,28 +1,49 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Switch, Route, HashRouter } from 'react-router-dom';
-
-// ==========Pages===============
-import Home from './Pages/Home/index'
+import React, { useLayoutEffect, useState } from 'react'
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Login from './Pages/Login/index'
-import Planets from './Pages/Planets/index'
+import Cadastro from './Pages/Cadastro/index'
+import Home from './Pages/Home/index'
 
+import Firebase from './backend/firebase'
 
+export default function App() {
 
-function App() {
+  const [user, setUser] = useState(null)
+
+  useLayoutEffect(() => {
+    Firebase
+      .auth()
+      .onAuthStateChanged(user => {
+        if (user !== null) {
+          setUser(user.uid)
+        } else {
+          setUser(null)
+        }
+      })
+  }, [])
+
+  const PrivateRoute = ({ component: Component }) => {
+    return <Route
+      render={(props => {
+        if (user) {
+          return <Component {...props} />
+        } else {
+          return <Redirect to={{ pathname: "/" }} />
+        }
+      })}
+
+    />
+  }
 
   return (
-    <div>
-			<HashRouter>
-				<Switch>
-					<Route path="/" exact={true} component={Home} />
-					<Route path="/login" component={Login} />		
-					<Route path="/planets" component={Planets} />
-					<Route path="*" component={Home} />
-				</Switch>
-			</HashRouter>
-      </div>
-  );
-}
+    <HashRouter>
+      <Switch>
+        <Route path="/" exact={true} component={Login} />
+        <Route path="/cadastro" exact={true} component={Cadastro} />
+        <PrivateRoute path="/home" component={Home} />
 
-export default App;
+      </Switch>
+
+    </HashRouter>
+  )
+}
