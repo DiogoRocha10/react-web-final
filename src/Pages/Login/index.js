@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 //Import CSS
-import './styles.css';
+import '../Cadastro/styles.css';
 import {Grid, TextField, Button, FormGroup, Checkbox}from '@material-ui/core';
 //services
 import * as AuthService from '../../services/AuthService';
@@ -91,6 +91,9 @@ function Login() {
 
                         <div className="criar-cadastro">
                             <Link to="/cadastro">Você ainda não possui uma conta?</Link>
+                        </div>
+                        <div className="criar-cadastro">
+                            <Link to="/recado">Quer deixar um recado?</Link>
                         </div>
                     </FormGroup>
                 </div>

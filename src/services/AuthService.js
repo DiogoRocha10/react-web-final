@@ -1,4 +1,4 @@
-import firebase  from '../backend/firebase'
+import {firebase}  from '../backend/firebase'
 
 export const login = (email, password) => {
     return new Promise((resolve, reject) => {

@@ -1,17 +1,22 @@
 import React, { useLayoutEffect, useState } from 'react'
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+//telas
 import Login from './Pages/Login/index'
 import Cadastro from './Pages/Cadastro/index'
+import Recado from './Pages/Recado/index'
 import Home from './Pages/Home/index'
-
-import Firebase from './backend/firebase'
+import ChatBot from './Pages/ChatBot/index'
+import Recados from './Pages/RecadosHome/index'
+//service
+import {firebase} from './backend/firebase'
 
 export default function App() {
 
   const [user, setUser] = useState(null)
 
   useLayoutEffect(() => {
-    Firebase
+    firebase
       .auth()
       .onAuthStateChanged(user => {
         if (user !== null) {
@@ -40,8 +45,10 @@ export default function App() {
       <Switch>
         <Route path="/" exact={true} component={Login} />
         <Route path="/cadastro" exact={true} component={Cadastro} />
+        <Route path="/recado" exact={true} component={Recado} />
         <PrivateRoute path="/home" component={Home} />
-
+        <PrivateRoute path="/chat" component={ChatBot} />
+        <PrivateRoute path="/recados" component={Recados} />
       </Switch>
 
     </HashRouter>
