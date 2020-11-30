@@ -8,6 +8,9 @@ import Recado from './Pages/Recado/index'
 import Home from './Pages/Home/index'
 import ChatBot from './Pages/ChatBot/index'
 import Recados from './Pages/RecadosHome/index'
+import Diario from './Pages/DiarioLista/index'
+import Registrar from './Pages/DiarioRegistro/index'
+import Tutoriais from './Pages/Tutoriais/index'
 //service
 import {firebase} from './backend/firebase'
 
@@ -49,6 +52,9 @@ export default function App() {
         <PrivateRoute path="/home" component={Home} />
         <PrivateRoute path="/chat" component={ChatBot} />
         <PrivateRoute path="/recados" component={Recados} />
+        <PrivateRoute path="/diario" component={Diario} />
+        <PrivateRoute path="/registrar" component={Registrar} />
+        <PrivateRoute path="/tutoriais" component={Tutoriais} />
       </Switch>
 
     </HashRouter>

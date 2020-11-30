@@ -11,6 +11,7 @@ import {db} from '../../backend/firebase'
 
 function Recados() {
     const [item, setItem] = useState([])
+    
     const getRecados = async () => {
         db.collection("recados").onSnapshot((querySnapchot) => {
             const docs = []
@@ -38,14 +39,16 @@ function Recados() {
             <Table striped bordered hover className="centraliza-colunasTabela">
             <thead>
                 <tr>
-                    <th>#id</th>
                     <th>Nome</th>
-                    <th>Recados</th>
+                    <th>E-mail</th>
+                    <th>Assunto</th>
+                    <th>Recado</th>
                 </tr>
-            {item.map((item, i) => {
-                return <tr key={i}>
-                    <th>{i+1}</th>
+            {item.map((item) => {
+                return <tr key={item}>
                     <th>{item.nome}</th>
+                    <th>{item.email}</th>
+                    <th>{item.assunto}</th>
                     <th>{item.recado}</th>
                 </tr>   
                 })}

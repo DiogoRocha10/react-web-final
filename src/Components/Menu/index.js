@@ -12,13 +12,28 @@ const Menu = () => (
                 </Link>
             </li>
             <li className="app-menu__item">
-                <Link className="app-menu__link" to="/recados">
-                    Recados
+                <Link className="app-menu__link" to="/diario">
+                    Diário
+                </Link>
+            </li>
+            <li className="app-menu__item">
+                <Link className="app-menu__link" to="/tutoriais">
+                    Tutoriais
                 </Link>
             </li>
             <li className="app-menu__item">
                 <Link className="app-menu__link" to="/chat">
                     ChatBot
+                </Link>
+            </li>
+            <li className="app-menu__item">
+                <Link className="app-menu__link" to="/recados">
+                    Recados
+                </Link>
+            </li>
+            <li className="app-menu__item">
+                <Link className="app-menu__link" to="/">
+                    Sair
                 </Link>
             </li>
         </ul>

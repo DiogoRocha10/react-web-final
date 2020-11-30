@@ -1,14 +1,14 @@
 .app-header {
   align-items: center;
-  background: #ffffff;
+  background: #72dbd2;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
-  margin-top: 16px;
+  margin-top: 0px;
 }
 
 .app-header__logo {
-  background: #bd0e37;
+  background:  #72dbd2;
   height: 25px;
   width: 20px;
 }

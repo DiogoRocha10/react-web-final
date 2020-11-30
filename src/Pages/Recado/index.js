@@ -10,17 +10,23 @@ import {db} from '../../backend/firebase'
 function Recado() {
     
     const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [assunto, setAssunto] = useState("")
     const [recado, setRecado] = useState("")
     const [msg, setMsg] = useState("")
     
     const salvarRecado = () => {
             db.collection('recados').doc().set({
                 nome: name,
+                email: email,
+                assunto: assunto,
                 recado: recado
             })
             .then(() => {
                 setName('')
                 setRecado('')
+                setAssunto('')
+                setEmail('')
                 setMsg('Recado Enviado!')
                 return
             })
@@ -41,6 +47,22 @@ function Recado() {
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            />
+                        <TextField 
+                            id="filled-basic" 
+                            variant="filled"         
+                            label="E-mail"
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            />
+                        <TextField 
+                            id="filled-basic" 
+                            variant="filled"         
+                            label="Assunto"
+                            type="text"
+                            value={assunto}
+                            onChange={(e) => setAssunto(e.target.value)}
                             />
 
                         <TextareaAutosize

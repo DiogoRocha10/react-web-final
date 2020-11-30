@@ -1,0 +1,7 @@
+.titulo-grande{
+    animation: bounceIn 2s;
+    font-size: 42px;
+}
+.centraliza-titulo {
+    text-align: center;
+}
